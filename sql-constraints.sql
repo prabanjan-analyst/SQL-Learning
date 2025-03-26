@@ -27,7 +27,7 @@ ADD CONSTRAINT UNIQUE(product_name);
 CREATE TABLE products(
 	product_id INT PRIMARY KEY,
     product_name VARCHAR(50) UNIQUE,
-    price DECIMAL(4, 2)
+    price DECIMAL(6, 2)
     CONSTRAINT chk_price CHECK(price > 50)
 );
 
@@ -103,6 +103,6 @@ REFERENCES products(product_id);
 
 -- To delete/drop the FOREIGN KEY
 ALTER TABLE transactions
-DROP FOREIGN KEY transaction_id_fk;
+DROP FOREIGN KEY transac_id_fk;
  
 -- ------ These are the 6 Important Constraints in SQL -- ------
